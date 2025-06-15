@@ -1,0 +1,17 @@
+{
+    "name": "wesley/buscador-cursos",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/dom-crawler": "^6.0",
+        "symfony/css-selector": "^7.3"
+    },
+    "autoload": {
+        "files": [
+            "./functions.php"
+        ],
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    }
+}
