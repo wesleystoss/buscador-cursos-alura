@@ -1,5 +1,5 @@
 {
-    "name": "wesleystoss/buscador-cursos",
+    "name": "wesleystoss/buscador-cursos-alura",
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^7.9",
