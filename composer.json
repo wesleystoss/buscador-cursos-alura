@@ -33,5 +33,11 @@
             "@cs",
             "@test"
         ]
+    },
+    "scripts-descriptions": {
+        "test": "Executa os testes",
+        "cs": "Executa o PHP_CodeSniffer",
+        "phan": "Executa o Phan",
+        "check": "Executa todos os testes, verificação de código e análise estática"
     }
 }
