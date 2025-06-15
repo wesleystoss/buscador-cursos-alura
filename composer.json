@@ -1,6 +1,7 @@
 {
     "name": "wesleystoss/buscador-cursos-alura",
     "type": "library",
+    "license": "MIT",
     "require": {
         "guzzlehttp/guzzle": "^7.9",
         "symfony/dom-crawler": "^6.0",
