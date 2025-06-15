@@ -65,6 +65,7 @@ class ComposerStaticInit06893eba25a60829b75405635926fc4e
         'M' => 
         array (
             'Microsoft\\PhpParser\\' => 20,
+            'Masterminds\\' => 12,
         ),
         'G' => 
         array (
@@ -182,6 +183,10 @@ class ComposerStaticInit06893eba25a60829b75405635926fc4e
         'Microsoft\\PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/microsoft/tolerant-php-parser/src',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

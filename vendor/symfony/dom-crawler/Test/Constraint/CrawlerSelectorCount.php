@@ -14,20 +14,17 @@ namespace Symfony\Component\DomCrawler\Test\Constraint;
 use PHPUnit\Framework\Constraint\Constraint;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class CrawlerSelectorTextSame extends Constraint
+final class CrawlerSelectorCount extends Constraint
 {
-    private string $selector;
-    private string $expectedText;
-
-    public function __construct(string $selector, string $expectedText)
-    {
-        $this->selector = $selector;
-        $this->expectedText = $expectedText;
+    public function __construct(
+        private readonly int $count,
+        private readonly string $selector,
+    ) {
     }
 
     public function toString(): string
     {
-        return sprintf('has a node matching selector "%s" with content "%s"', $this->selector, $this->expectedText);
+        return sprintf('selector "%s" count is "%d"', $this->selector, $this->count);
     }
 
     /**
@@ -35,12 +32,7 @@ final class CrawlerSelectorTextSame extends Constraint
      */
     protected function matches($crawler): bool
     {
-        $crawler = $crawler->filter($this->selector);
-        if (!\count($crawler)) {
-            return false;
-        }
-
-        return $this->expectedText === trim($crawler->text(null, true));
+        return $this->count === \count($crawler->filter($this->selector));
     }
 
     /**
@@ -48,6 +40,6 @@ final class CrawlerSelectorTextSame extends Constraint
      */
     protected function failureDescription($crawler): string
     {
-        return 'the Crawler '.$this->toString();
+        return sprintf('the Crawler selector "%s" was expected to be found %d time(s) but was found %d time(s)', $this->selector, $this->count, \count($crawler->filter($this->selector)));
     }
 }

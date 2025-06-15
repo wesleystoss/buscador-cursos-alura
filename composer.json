@@ -28,9 +28,14 @@
         "test": "phpunit tests/TestBuscadorDeCursos.php",
         "cs": "phpcs --standard=PSR12 src",
         "phan": "phan --allow-polyfill-parser",
+        "ls": "ls -la",
+        "buscar-cursos": "php buscar-cursos.php",
         "check": [
             "@phan",
             "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
             "@test"
         ]
     },
