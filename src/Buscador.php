@@ -3,11 +3,12 @@
 namespace Alura\BuscadorDeCursos;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 class Buscador
 {
-    public function __construct(private Client $httpClient, private Crawler $crawler)
+    public function __construct(private ClientInterface $httpClient, private Crawler $crawler)
     {
     }
 
@@ -20,7 +21,7 @@ class Buscador
         $cursos = [];
 
         foreach ($elementos as $elemento) {
-            $cursos[] = $elemento->textContent . PHP_EOL;
+            $cursos[] = $elemento->textContent;
         }
         return $cursos;
     }
