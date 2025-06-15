@@ -85,6 +85,7 @@ class ComposerStaticInit06893eba25a60829b75405635926fc4e
         ),
         'A' => 
         array (
+            'Alura\\BuscadorDeCursos\\Tests\\' => 29,
             'Alura\\BuscadorDeCursos\\' => 23,
             'AdvancedJsonRpc\\' => 16,
         ),
@@ -213,6 +214,10 @@ class ComposerStaticInit06893eba25a60829b75405635926fc4e
         'Composer\\Pcre\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/pcre/src',
+        ),
+        'Alura\\BuscadorDeCursos\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Alura\\BuscadorDeCursos\\' => 
         array (
